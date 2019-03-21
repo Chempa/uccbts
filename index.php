@@ -37,7 +37,7 @@ if($id != "None"){
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $response  = curl_exec($ch);
     curl_close($ch);
-    echo "success";
+    echo "success: ".$response;
 }else{
     echo "Failed";
 }
