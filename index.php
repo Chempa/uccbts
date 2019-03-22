@@ -1,13 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "id9016744_server";
-$password = "KIMPA7CB";
-$db_name= "id9016744_btsucc_db";
-
 $bus = $_GET["busid"];
 $lat = floatval($_GET["lat"]);
 $lon = floatval($_GET["lon"]);
-// $speed = $_GET["speed"];
+$speed = $_GET["speed"];
 
 //The URL that we want to send a PUT request to.
 
@@ -25,7 +20,7 @@ if($bus == "A"){
     $id = "None";
 }
 
-$data = array("id"=>$id,"busName"=>$bus,"lat"=>$lat,"lon"=>$lon);
+$data = array("id"=>$id,"busName"=>$bus,"lat"=>$lat,"lon"=>$lon,"speed");
 
 if($id != "None"){
     $data_json = json_encode($data);
