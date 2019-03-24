@@ -4,6 +4,18 @@ $lat = floatval($_GET["lat"]);
 $lon = floatval($_GET["lon"]);
 $speed = $_GET["speed"];
 
+ob_end_clean();
+header("Connection: close\r\n");
+header("Content-Encoding: none\r\n");
+ignore_user_abort(true); // optional
+ob_start();
+echo ('Text user will see');
+$size = ob_get_length();
+header("Content-Length: $size");
+ob_end_flush();     // Strange behaviour, will not work
+flush();            // Unless both are called !
+ob_end_clean();
+
 //The URL that we want to send a PUT request to.
 
 $url = 'https://ucc-shuttle-tracker-app.firebaseio.com/coordinates.json';
