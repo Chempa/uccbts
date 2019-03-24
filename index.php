@@ -32,7 +32,7 @@ if($bus == "A"){
     $id = "None";
 }
 
-$data = array("id"=>$id,"busName"=>$bus,"lat"=>$lat,"lon"=>$lon,"speed");
+$data = array("id"=>$id,"busName"=>$bus,"lat"=>$lat,"lon"=>$lon,"speed"=>$speed);
 
 if($id != "None"){
     $data_json = json_encode($data);
