@@ -1,8 +1,8 @@
 <?php
-$bus = $_GET["busid"];
-$lat = floatval($_GET["lat"]);
-$lon = floatval($_GET["lon"]);
-$speed = $_GET["speed"];
+$bus = $_POST["busid"];
+$lat = floatval($_POST["lat"]);
+$lon = floatval($_POST["lon"]);
+$speed = $_POST["speed"];
 
 ob_end_clean();
 header("Connection: close\r\n");
